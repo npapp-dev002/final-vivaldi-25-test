@@ -21,7 +21,11 @@ import {
     provideConfig(mediaConfig),
     ...defaultCmsContentProviders,
     provideConfig(<SiteContextConfig>{
-      context: {},
+      context: {
+        urlParameters: ['baseSite', 'language', 'currency'],
+        baseSite: ['electronics-spa','apparel-uk-spa'],
+        currency: ['USD', 'GBP',]
+      },
     }),
     provideConfig(<I18nConfig>{
       i18n: {
