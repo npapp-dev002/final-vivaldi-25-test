@@ -3,7 +3,6 @@ import { translationChunksConfig, translationsEn } from '@spartacus/assets';
 import {
   FeaturesConfig,
   I18nConfig,
-  OccConfig,
   provideConfig,
   provideConfigFactory,
   SiteContextConfig,
@@ -21,13 +20,6 @@ import {
     provideConfigFactory(layoutConfigFactory),
     provideConfig(mediaConfig),
     ...defaultCmsContentProviders,
-    provideConfig(<OccConfig>{
-      backend: {
-        occ: {
-          baseUrl: 'https://localhost:9002',
-        },
-      },
-    }),
     provideConfig(<SiteContextConfig>{
       context: {},
     }),
